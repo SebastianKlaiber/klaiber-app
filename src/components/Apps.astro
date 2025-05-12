@@ -1,0 +1,137 @@
+---
+// Apps component to showcase your applications
+---
+
+<section id="apps">
+  <div class="apps-container">
+    <h2>My Apps</h2>
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon">
+          <img src="/tastebuddy_icon.png" alt="TasteBuddy App Icon" />
+        </div>
+        <div class="app-info">
+          <h3>TasteBuddy</h3>
+          <p>Your personal food journal and restaurant discovery app. Track your favorite meals and find new places to eat.</p>
+          <div class="app-links">
+            <a href="https://taste-buddy.app" class="app-link">Website</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="app-card">
+        <div class="app-icon">
+          <img src="/bird_icon.png" alt="Bird Identifier App Icon" />
+        </div>
+        <div class="app-info">
+          <h3>Bird Identifier</h3>
+          <p>Identify birds in your area with this easy-to-use bird recognition app. Perfect for birdwatchers and nature enthusiasts.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #apps {
+    padding: 4rem 1rem;
+  }
+  
+  .apps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(83.21deg, #10b981 0%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .app-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .app-icon {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(83.21deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+  
+  .app-icon img {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+  
+  .app-info {
+    padding: 1.5rem;
+  }
+  
+  .app-info h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+  }
+  
+  .app-info p {
+    margin: 0 0 1.5rem 0;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  
+  .app-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .app-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  
+  .app-link:hover {
+    background: #e5e7eb;
+  }
+  
+  @media (max-width: 768px) {
+    #apps {
+      padding: 3rem 1rem;
+    }
+    
+    .apps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

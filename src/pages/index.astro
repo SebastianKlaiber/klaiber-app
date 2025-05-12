@@ -1,5 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Apps from '../components/Apps.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +7,49 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<div class="container">
+		<header>
+			<h1>Sebastian Klaiber</h1>
+			<p>Flutter Developer & App Creator</p>
+		</header>
+		<Apps />
+	</div>
 </Layout>
+
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	header {
+		text-align: center;
+		margin-bottom: 3rem;
+		padding: 4rem 0;
+	}
+
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		background: linear-gradient(83.21deg, #10b981 0%, #059669 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	p {
+		font-size: 1.25rem;
+		color: #4b5563;
+	}
+
+	@media (max-width: 768px) {
+		header {
+			padding: 2rem 0;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+	}
+</style>

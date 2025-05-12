@@ -1,3 +1,7 @@
+---
+import Footer from '../components/Footer.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,10 +9,12 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Sebastian Klaiber | Flutter Developer</title>
 	</head>
 	<body>
+		<div class="background"></div>
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -18,5 +24,24 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		position: relative;
+		background-color: #f9fafb;
+	}
+
+	.background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 50%),
+					radial-gradient(circle at bottom left, rgba(5, 150, 105, 0.1), transparent 50%);
+		filter: blur(50px);
 	}
 </style>
+
+<script>
+	// Any client-side JavaScript can go here
+</script>
